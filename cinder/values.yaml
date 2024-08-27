@@ -593,6 +593,8 @@ conf:
     volume:
       pods:
         - volume
+      # TODO: Audit rootwrap filters and align them with the recent releases (2024.1 and newer)
+      # Probably it is better to rely on the default provided by Cinder project in the image.
       content: |
         # cinder-rootwrap command filters for volume nodes
         # This file should be owned by (and only-writeable by) the root user
@@ -636,6 +638,10 @@ conf:
         # This line ties the superuser privs with the config files, context name,
         # and (implicitly) the actual python code invoked.
         privsep-rootwrap: RegExpFilter, privsep-helper, root, privsep-helper, --config-file, /etc/(?!\.\.).*, --privsep_context, os_brick.privileged.default, --privsep_sock_path, /tmp/.*
+
+        # Privsep calls within cinder iteself
+        privsep-rootwrap-sys_admin: RegExpFilter, privsep-helper, root, privsep-helper, --config-file, /etc/(?!\.\.).*, --privsep_context, cinder.privsep.sys_admin_pctxt, --privsep_sock_path, /tmp/.*
+
         # The following and any cinder/brick/* entries should all be obsoleted
         # by privsep, and may be removed once the os-brick version requirement
         # is updated appropriately.

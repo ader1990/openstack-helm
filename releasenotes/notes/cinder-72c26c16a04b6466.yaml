@@ -1,0 +1,6 @@
+---
+cinder:
+  - |
+    Update default rootwrap filters to enable cinder-volume to run
+    privileged commands.
+...
