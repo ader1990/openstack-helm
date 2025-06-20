@@ -25,6 +25,6 @@ chown ${NEUTRON_USER_UID} /run/openvswitch/db.sock
 mkdir -p /tmp/pod-shared
 tee > /tmp/pod-shared/neutron-agent.ini << EOF
 [DEFAULT]
-host = $(hostname --fqdn)
+host = $(hostname)
 EOF
 {{- end }}

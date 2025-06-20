@@ -71,6 +71,6 @@ EOF
 {{- if and ( empty .Values.conf.nova.DEFAULT.host ) ( .Values.pod.use_fqdn.compute ) }}
 tee > /tmp/pod-shared/nova-compute-fqdn.conf << EOF
 [DEFAULT]
-host = $(hostname --fqdn)
+host = $(hostname)
 EOF
 {{- end }}
