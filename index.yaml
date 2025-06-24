@@ -16,7 +16,7 @@ entries:
     - name: OpenStack-Helm Authors
     name: neutron
     urls:
-    - neutron-2025.1.0.tgz
+    - https://github.com/ader1990/openstack-helm/blob/flatcar_june_2025/neutron-2025.1.0.tgz
     version: 2025.1.0
   nova:
   - apiVersion: v2
@@ -34,6 +34,6 @@ entries:
     - name: OpenStack-Helm Authors
     name: nova
     urls:
-    - nova-2025.1.0.tgz
+    - https://github.com/ader1990/openstack-helm/blob/flatcar_june_2025/nova-2025.1.0.tgz
     version: 2025.1.0
 generated: "2025-06-24T12:55:18.593136342Z"
