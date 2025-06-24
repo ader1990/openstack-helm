@@ -3,9 +3,9 @@ entries:
   helm-toolkit:
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2025-06-24T13:06:23.495856889Z"
+    created: "2025-06-24T20:28:11.228652549Z"
     description: OpenStack-Helm Helm-Toolkit
-    digest: dfa3cc1627a24f0e2b398812d8735170dee6d587737d12fd922def7fb33d8149
+    digest: 62ca68dbede57e49c794e141ed22055793cfa853e458b151910d33249db720ba
     home: https://docs.openstack.org/openstack-helm
     icon: https://www.openstack.org/themes/openstack/images/project-mascots/OpenStack-Helm/OpenStack_Project_OpenStackHelm_vertical.png
     maintainers:
@@ -17,10 +17,31 @@ entries:
     urls:
     - helm-toolkit-2025.1.0.tgz
     version: 2025.1.0
+  keystone:
+  - apiVersion: v2
+    appVersion: v1.0.0
+    created: "2025-06-24T20:28:11.24180319Z"
+    dependencies:
+    - name: helm-toolkit
+      repository: file://../helm-toolkit
+      version: '>= 0.1.0'
+    description: OpenStack-Helm Keystone
+    digest: 4984082922795a90df620eaddeb0bedbe513c9d24a4a50932251ee2ce61010aa
+    home: https://docs.openstack.org/keystone/latest/
+    icon: https://www.openstack.org/themes/openstack/images/project-mascots/Keystone/OpenStack_Project_Keystone_vertical.png
+    maintainers:
+    - name: OpenStack-Helm Authors
+    name: keystone
+    sources:
+    - https://opendev.org/openstack/keystone
+    - https://opendev.org/openstack/openstack-helm
+    urls:
+    - keystone-2025.1.0.tgz
+    version: 2025.1.0
   neutron:
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2025-06-24T13:06:23.521900312Z"
+    created: "2025-06-24T20:28:11.264458929Z"
     dependencies:
     - name: helm-toolkit
       repository: file://../helm-toolkit
@@ -41,7 +62,7 @@ entries:
   nova:
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2025-06-24T13:06:23.547194145Z"
+    created: "2025-06-24T20:28:11.288580247Z"
     dependencies:
     - name: helm-toolkit
       repository: file://../helm-toolkit
@@ -59,4 +80,4 @@ entries:
     urls:
     - nova-2025.1.0.tgz
     version: 2025.1.0
-generated: "2025-06-24T13:06:23.483949804Z"
+generated: "2025-06-24T20:28:11.218890487Z"
