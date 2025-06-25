@@ -59,7 +59,7 @@ metadata:
   annotations:
 {{- if .Values.helm3_hook }}
     "helm.sh/hook": "pre-install,post-install,post-upgrade"
-    "helm.sh/hook-weight": "5"
+    "helm.sh/hook-weight": "-85"
     "helm.sh/hook-delete-policy": before-hook-creation
 {{- end }}
 {{ tuple "keystone_fernet_setup" $envAll | include "helm-toolkit.snippets.custom_job_annotations" | indent 4 }}
