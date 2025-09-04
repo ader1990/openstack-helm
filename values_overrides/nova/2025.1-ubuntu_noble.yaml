@@ -1,23 +1,29 @@
 ---
 images:
   tags:
-    bootstrap: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    db_drop: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    db_init: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_user: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_service: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_endpoints: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    nova_api: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_cell_setup: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_cell_setup_init: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    nova_compute: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_compute_ssh: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_conductor: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_db_sync: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_novncproxy: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_novncproxy_assets: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_scheduler: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_spiceproxy: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_spiceproxy_assets: "quay.io/airshipit/nova:2025.1-ubuntu_noble"
-    nova_service_cleaner: "docker.io/openstackhelm/ceph-config-helper:latest-ubuntu_jammy"
+    bootstrap: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    db_drop: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    db_init: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_user: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_service: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_endpoints: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    nova_api: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_cell_setup: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_cell_setup_init: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    nova_compute: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_compute_ssh: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_conductor: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_db_sync: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_novncproxy: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_novncproxy_assets: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_scheduler: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_spiceproxy: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_spiceproxy_assets: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
+    nova_service_cleaner: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
+    nova_storage_init: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
+    nova_serialproxy: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_archive_deleted_rows: "tinkerbell.azurecr.io/foki/nova:2025.1-ubuntu_noble"
+    nova_wait_for_computes_init: gcr.io/google_containers/hyperkube-arm64:v1.11.6
+  pull_policy: "Always"
 ...

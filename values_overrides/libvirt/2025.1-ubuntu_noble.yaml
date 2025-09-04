@@ -1,5 +1,7 @@
 ---
 images:
   tags:
-    libvirt: docker.io/openstackhelm/libvirt:2025.1-ubuntu_noble
+    libvirt: tinkerbell.azurecr.io/foki/libvirt:epoxy-ubuntu_noble
+    dep_check: "tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy"
+    ceph_config_helper: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
 ...

@@ -13,9 +13,5 @@
 ---
 images:
   tags:
-    prometheus_mysql_exporter_helm_tests: tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble
-    ks_user: tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble
     dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
-    mariadb: tinkerbell.azurecr.io/foki/mariadb:lts-ubuntu_jammy
-    mariadb_controller: tinkerbell.azurecr.io/foki/mariadb:lts-ubuntu_jammy
 ...

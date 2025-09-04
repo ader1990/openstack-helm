@@ -1,22 +1,28 @@
 ---
 images:
   tags:
-    bootstrap: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    db_init: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    db_drop: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_user: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_service: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_endpoints: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    neutron_db_sync: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_dhcp: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_l3: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_l2gw: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_linuxbridge_agent: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_metadata: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_ovn_metadata: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_openvswitch_agent: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_server: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_rpc_server: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_bagpipe_bgp: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
-    neutron_netns_cleanup_cron: "quay.io/airshipit/neutron:2025.1-ubuntu_noble"
+    bootstrap: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    db_init: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    db_drop: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_user: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_service: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_endpoints: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    neutron_db_sync: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_dhcp: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_l3: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_l2gw: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_linuxbridge_agent: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_metadata: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_ovn_metadata: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_openvswitch_agent: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_server: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_rpc_server: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_bagpipe_bgp: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_netns_cleanup_cron: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
+    purge_test: docker.io/openstackhelm/ospurge:latest
+    netoffload: ghcr.io/vexxhost/netoffload:v1.0.1
+    neutron_ovn_db_sync: "tinkerbell.azurecr.io/foki/neutron:2025.1-ubuntu_noble"
+    neutron_sriov_agent_init: quay.io/airshipit/neutron:stein-18.04-sriov
+    neutron_ironic_agent_init: docker.io/openstackhelm/neutron:2024.1-ubuntu_jammy
 ...

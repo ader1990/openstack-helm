@@ -1,0 +1,19 @@
+storage: pvc
+volume:
+  class_name: general
+  size: 100Gi
+pod:
+  probes:
+    api:
+      glance-api:
+        readiness:
+          enabled: true
+          params:
+            periodSeconds: 10
+            timeoutSeconds: 5
+        liveness:
+          enabled: true
+          params:
+            initialDelaySeconds: 120
+            periodSeconds: 300
+            timeoutSeconds: 600

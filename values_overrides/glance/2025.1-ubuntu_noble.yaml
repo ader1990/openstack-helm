@@ -1,14 +1,23 @@
 ---
 images:
   tags:
-    bootstrap: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    db_init: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    db_drop: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_user: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_service: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    ks_endpoints: "quay.io/airshipit/heat:2025.1-ubuntu_noble"
-    glance_db_sync: "quay.io/airshipit/glance:2025.1-ubuntu_noble"
-    glance_api: "quay.io/airshipit/glance:2025.1-ubuntu_noble"
-    glance_metadefs_load: "quay.io/airshipit/glance:2025.1-ubuntu_noble"
-    glance_storage_init: "docker.io/openstackhelm/ceph-config-helper:latest-ubuntu_jammy"
+    bootstrap: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    db_init: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    db_drop: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_user: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_service: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    ks_endpoints: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
+    glance_db_sync: "tinkerbell.azurecr.io/foki/glance:2025.1-ubuntu_noble"
+    glance_api: "tinkerbell.azurecr.io/foki/glance:2025.1-ubuntu_noble"
+    glance_metadefs_load: "tinkerbell.azurecr.io/foki/glance:2025.1-ubuntu_noble"
+    glance_storage_init: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
+    dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
+  pull_policy: "Always"
+bootstrap:
+  structured:
+    images:
+      cirros:
+        name: "Cirros 0.6.2 64-bit"
+        source_url: "http://download.cirros-cloud.net/0.6.2/"
+        image_file: "cirros-0.6.2-aarch64-disk.img"
 ...

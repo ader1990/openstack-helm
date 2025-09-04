@@ -1,0 +1,8 @@
+---
+images:
+  tags:
+    openvswitch_db_server: tinkerbell.azurecr.io/foki/latest-ubuntu_focal
+    openvswitch_vswitchd: tinkerbell.azurecr.io/foki/latest-ubuntu_focal
+    dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
+  pull_policy: "Always"
+...
