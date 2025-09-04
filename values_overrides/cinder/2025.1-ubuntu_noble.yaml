@@ -13,7 +13,8 @@ images:
     cinder_volume: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
     cinder_volume_usage_audit: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
     cinder_db_purge: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
-    cinder_storage_init: "docker.io/openstackhelm/ceph-config-helper:latest-ubuntu_noble"
     cinder_backup: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
-    cinder_backup_storage_init: "docker.io/openstackhelm/ceph-config-helper:latest-ubuntu_noble"
+    cinder_backup_storage_init: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
+    cinder_storage_init: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
+    dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
 ...
