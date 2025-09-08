@@ -1,20 +1,23 @@
 ---
+logging:
+  logger_cinder:
+    level: VERBOSE
 images:
+  pull_policy: "Always"
   tags:
     db_init: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
-    cinder_db_sync: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
+    cinder_db_sync: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
     db_drop: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
     ks_user: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
     ks_service: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
     ks_endpoints: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
-    cinder_api: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
+    cinder_api: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
     bootstrap: "tinkerbell.azurecr.io/foki/heat:2025.1-ubuntu_noble"
-    cinder_scheduler: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
-    cinder_volume: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
-    cinder_volume_usage_audit: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
-    cinder_db_purge: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
-    cinder_backup: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_noble"
+    cinder_scheduler: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
+    cinder_volume: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
+    cinder_volume_usage_audit: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
+    cinder_db_purge: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
+    cinder_backup: "tinkerbell.azurecr.io/foki/cinder:2025.1-ubuntu_jammy"
     cinder_backup_storage_init: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
     cinder_storage_init: tinkerbell.azurecr.io/foki/ceph-config-helper:19.2.3-1-foki-ubuntu_jammy
     dep_check: tinkerbell.azurecr.io/foki/kubernetes-entrypoint:latest-ubuntu_jammy
-...
